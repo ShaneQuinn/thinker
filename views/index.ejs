@@ -1,0 +1,39 @@
+<!-- views/index.ejs -->
+<html lang="en">
+    <head>
+        <% include partials/head %>
+    </head>
+
+    <body>
+        <header>
+            <% include partials/header %>
+        </header>
+
+        <main>
+            <!-- input form -->
+            <div class="container">
+                <row>
+                    <h1 class="text-center">Send a thought to the clouds</h1>
+                    <form class="col-6 mx-auto" action="/new" method="POST">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="item" placeholder="Enter Thought"><span>  <button type="submit" class="btn btn-primary">Submit</button>
+</span>
+                    </div>
+                    </form>
+                </row>
+                <!-- list -->
+                <div class="row">
+                    <ul class="col-6 mx-auto">
+                        <% for(var i = 0; i < thoughtList.length; i++) { %>
+                            <li> <%= thoughtList[i].name %> </i>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <% include partials/footer %>
+        </footer>
+    </body>
+</html>
