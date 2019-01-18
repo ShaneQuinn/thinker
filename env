@@ -1,0 +1,3 @@
+module.exports = {
+dbinfo: "mongodb://thinker:thinker01@ds011419.mlab.com:11419/devops"
+};
