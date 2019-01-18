@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var bodyParse = require("body-parser");
 var mongoose = require("mongoose");
-var env = require('./.env');
+var env = require('./env');
 
 //mongodb connection
 mongoose.connect(env.dbinfo);
