@@ -2,10 +2,10 @@ var express = require("express");
 var app = express();
 var bodyParse = require("body-parser");
 var mongoose = require("mongoose");
-var local = require('./local');
+var env = require('./env');
 
 //mongodb connection
-mongoose.connect(local.dbinfo);
+mongoose.connect(env.dbinfo);
 
 //view engine for ejs file
 app.set("view engine", "ejs");
