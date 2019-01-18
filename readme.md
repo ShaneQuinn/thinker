@@ -14,6 +14,9 @@ I wanted to add another layer of complexity, so I opted for an external database
 ## CI/CD Pipeline
 For the CI/CD portion, I decided to use CircleCI to build and test my app after every Github master branch commit. If the build is good, it's pushed to the AWS Elastic Beanstalk environment which handles the load balancing as well as monitoring and usage metrics.
 
+## Repositories
 [AWS hosted app](http://thinker.us-east-1.elasticbeanstalk.com/)
+
 [Github Repo](https://github.com/ShaneQuinn/thinker)
+
 [CircleCI Repo](https://circleci.com/gh/ShaneQuinn/thinker)
