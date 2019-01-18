@@ -20,7 +20,7 @@ jobs:
 
       - run:
           name: Deploying
-          command: eb deploy thinker-prod
+          command: eb deploy thinker-production
 workflows:
   version: 2
   build:
