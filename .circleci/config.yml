@@ -5,14 +5,14 @@
 version: 2
 jobs:
   deploy:
-    working_directory: ~/app
+    working_directory: /home/node/app
     docker:
       - image: circleci/node:8.15
     steps:
       - checkout
       - run:
           name: Installing deployment dependencies
-          working_directory: /
+          working_directory: /home/node/app
           command: |
             sudo apt-get -y -qq update
             sudo apt-get install python-pip python-dev build-essential
@@ -20,7 +20,7 @@ jobs:
 
       - run:
           name: Deploying
-          command: eb deploy thinker-production
+          command: eb deploy prod-env
 workflows:
   version: 2
   build:
