@@ -5,14 +5,14 @@
 version: 2
 jobs:
   deploy:
-    working_directory: /
+    working_directory: /app/
     docker:
       - image: node:8
     steps:
       - checkout
       - run:
           name: Installing deployment dependencies
-          working_directory: /
+          working_directory: /app/
           command: |
             sudo apt-get -y -qq update
             sudo apt-get install python-pip python-dev build-essential
