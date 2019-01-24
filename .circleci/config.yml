@@ -15,7 +15,7 @@ jobs:
           working_directory: /app/
           command: |
             apt-get -y -qq update
-            apt-get -y install python-pip python-dev build-essential
+            apt-get install python-pip python-dev build-essential
             pip install awsebcli --upgrade
 
       - run:
