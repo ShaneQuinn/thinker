@@ -7,7 +7,7 @@ jobs:
   deploy:
     working_directory: /home/node/app
     docker:
-      - image: circleci/node:8.15
+      - image: node:8
     steps:
       - checkout
       - run:
