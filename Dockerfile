@@ -1,18 +1,18 @@
-FROM node:8.15.0-jessie
+FROM node:8
 
 # Create app directory
-WORKDIR /home/node/app
+WORKDIR /
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
 
-RUN npm install
-
 # Bundle app source
 COPY . ./
 
-EXPOSE 3000:80
+RUN npm install
+
+EXPOSE 3000
 CMD ["npm", "start"]
 
 
