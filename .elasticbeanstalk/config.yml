@@ -3,6 +3,6 @@ branch-defaults:
     environment: master-thinker
 global:
   application_name: thinker
-  default_platform: docker-17.12.1
+  default_platform: docker
   default_region: us-east-1
   sc: git
